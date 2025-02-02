@@ -8,7 +8,7 @@ variables:
   ACR_NAME: 'ACRS6JoelArias'  
   IMAGE_NAME: 's6-joel-arias-nginx'  
   SERVICE_CONNECTION_NAME: 'SConnectS6Joel'  
-
+  
 jobs:
 - job: BuildAndPush
   pool:
