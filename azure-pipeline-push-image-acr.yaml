@@ -4,7 +4,6 @@ trigger:
       - main
 
 variables:
-  # Variables de entorno
   ACR_NAME: 'ACRS6JoelArias'  
   IMAGE_NAME: 's6-joel-arias-nginx'  
   SERVICE_CONNECTION_NAME: 'SConnectS6Joel'  
@@ -15,19 +14,12 @@ jobs:
     vmImage: 'ubuntu-latest'
 
   steps:
-  - task: Checkout@1
-    displayName: 'Descargar repositorio'
-
-  - script: |
-      ls -R my-repo/docker
-    displayName: 'Verificar archivos en my-repo/docker'
-
   - task: Docker@2
     inputs:
       command: 'buildAndPush'
       containerRegistry: '$(SERVICE_CONNECTION_NAME)'
       repository: '$(ACR_NAME).azurecr.io/$(IMAGE_NAME)'
-      dockerfile: 'my-repo/docker/Dockerfile'  # Ruta específica
+      dockerfile: '**/Dockerfile'
       tags: |
         latest
-    displayName: 'Build and Push Docker Image'
+      displayName: 'Build and Push Docker Image'
