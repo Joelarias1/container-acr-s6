@@ -6,8 +6,8 @@ trigger:
 variables:
   VM_IP_PUBLICA: '20.81.209.158'  # Se debe colocar la IP pública de tu máquina virtual
   IMAGE_NAME: 's6-joel-arias-nginx'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
-  ACR_NAME: 'ACRS6JoelArias'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
-  ACR_USERNAME: 'ACRS6JoelArias'  # Se debe colocar el Nombre de usuario del ACR
+  ACR_NAME: 'acrs6joelarias'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
+  ACR_USERNAME: 'acrs6joelarias'  # Se debe colocar el Nombre de usuario del ACR
   ACR_PASSWORD: 'fFKg+Q4KiI7canTT26ETx3ANnC2NwDpJaSeHF2Zdop+ACRAxuQwa'  # Se debe colocar la Contraseña del ACR
 
 stages:
